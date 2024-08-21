@@ -43,6 +43,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Void deleteById(Long id) {
+        if (Objects.nonNull(id)) {
+            employeeRepository.deleteById(id);
+        }
         return null;
     }
 }
